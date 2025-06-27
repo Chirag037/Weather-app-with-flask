@@ -36,9 +36,6 @@ weather_app/
 │ └── style.css # CSS styling and animations
 └── README.md # Project documentation
 
-yaml
-Copy
-Edit
 
 ---
 
