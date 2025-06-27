@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherPro - Beautiful Weather App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <i class="fas fa-cloud-sun weather-icon-header"></i>
+            <h1>WeatherPro</h1>
+            <p class="subtitle">Get real-time weather information</p>
+        </div>
+
+        <!-- Search Form -->
+        <form method="POST" class="search-form">
+            <div class="input-group">
+                <input type="text" name="city" placeholder="Enter city name..." required class="city-input">
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Weather Display -->
+        {% if weather %}
+            {% if weather == 'not_found' %}
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>City Not Found</h3>
+                    <p>Please check the spelling and try again</p>
+                </div>
+            {% else %}
+                <div class="weather-card">
+                    <div class="weather-main">
+                        <div class="weather-icon">
+                            <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@4x.png" alt="{{ weather.description }}">
+                        </div>
+                        <div class="weather-info">
+                            <h2 class="city-name">
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{ weather.city }}
+                            </h2>
+                            <div class="temperature">{{ weather.temperature }}°C</div>
+                            <div class="description">{{ weather.description }}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            <span>Temperature</span>
+                            <strong>{{ weather.temperature }}°C</strong>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Condition</span>
+                            <strong>{{ weather.description }}</strong>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="welcome-message">
+                <i class="fas fa-search-location"></i>
+                <h3>Welcome to WeatherPro!</h3>
+                <p>Enter a city name above to get started with real-time weather information</p>
+            </div>
+        {% endif %}
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Powered by OpenWeatherMap API</p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth animations on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.8s ease-out';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+
+        // Add input focus effects
+        const cityInput = document.querySelector('.city-input');
+        cityInput.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        
+        cityInput.addEventListener('blur', function() {
+            this.parentElement.classList.remove('focused');
+        });
+    </script>
+</body>
+</html>
