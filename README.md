@@ -27,14 +27,13 @@
 ---
 
 ## 📁 Project Structure
-
-weather_app/
-├── app.py # Flask backend application
-├── templates/
-│ └── index.html # Main HTML template
-├── static/
-│ └── style.css # CSS styling and animations
-└── README.md # Project documentation
+weather_app:
+  - app.py  # Flask backend application
+  - templates:
+      - index.html  # Main HTML template
+  - static:
+      - style.css  # CSS styling and animations
+  - README.md  # Project documentation
 
 
 ---
