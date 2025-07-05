@@ -77,4 +77,5 @@ Visit http://127.0.0.1:5000 to see the app in action.
 Thanks to OpenWeatherMap for their free API
 
 Inspired by beautiful weather apps and UI trends
+<!-- try this and leave review if possible -->
 
