@@ -5,7 +5,7 @@
 
 ---
 
-## 🚀 Features
+## 🚀 Features  
 
 - 🔍 **Search by City:** Enter any city name and get instant weather information.  
 - 🌡️ **Live Weather Data:** Displays temperature, weather condition, and corresponding icon.  
