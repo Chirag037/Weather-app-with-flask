@@ -8,7 +8,7 @@
 ## 🚀 Features  
 
 - 🔍 **Search by City:** Enter any city name and get instant weather information.  
-- 🌡️ **Live Weather Data:** Displays temperature, weather condition, and corresponding icon.  
+- 🌡️ **Live Weather Data:** Displays temperature, weather condition, and corresponding icon.    
 - 📱 **Responsive Design:** Works smoothly on both desktop and mobile devices.  
 - 🎨 **Stylish UI:** Gradient backgrounds, glass-effect cards, and smooth animations.  
 - ⚠️ **Error Handling:** Friendly messages when a city is not found or invalid input is given.
