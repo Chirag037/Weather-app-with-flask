@@ -12,7 +12,7 @@
 - 📱 **Responsive Design:** Works smoothly on both desktop and mobile devices.  
 - 🎨 **Stylish UI:** Gradient backgrounds, glass-effect cards, and smooth animations.   
 - ⚠️ **Error Handling:** Friendly messages when a city is not found or invalid input is given.
-- this is simple site which use fetch data from api and show the data .
+- this is simple site which use fetch data from api and show the data .  
 
 
 
