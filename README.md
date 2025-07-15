@@ -1,4 +1,4 @@
-
+  
 # 🌤 WeatherNow — Stylish Flask Weather App
 
 **WeatherNow** is a simple, elegant weather forecast web application built with **Python (Flask)** and the **OpenWeatherMap API**. Get real-time weather updates for any city in a beautifully animated, modern interface.
